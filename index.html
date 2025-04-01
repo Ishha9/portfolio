@@ -119,44 +119,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-#enquire {
-    width: 95%; /* Same as other sections */
-    margin: auto; /* Center align */
-    padding: 20px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-#enquiry-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-#enquiry-form input, 
-#enquiry-form textarea {
-    width: 95%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#enquiry-form button {
-    background: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#enquiry-form button:hover {
-    background: #0056b3;
-}
-
 
 
 
@@ -171,7 +133,6 @@
             <a href="#internships">Internship Experience</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
-            <a href="#enquire">Enquiry</a>
         </nav>
     </header>
 
@@ -269,47 +230,10 @@ and storage solutions.
 
     
 
-    <section id="enquire" class="section fade-in">
-    <h2>Enquiry</h2>
-    <form id="enquiry-form">
-        <div class="form-group">
-            <input type="text" id="name" class="form-control input-lg" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-            <input type="email" id="email" class="form-control input-lg" placeholder="E-mail" required>
-        </div>
-        <div class="form-group">
-            <input type="text" id="subject" class="form-control input-lg" placeholder="Subject" required>
-        </div>
-        <div class="form-group">
-            <textarea id="message" class="form-control input-lg" rows="5" placeholder="Message" required></textarea>
-        </div>
-        <div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </div>
-    </form>
-</section>
+    
 </div>
 
 
-<script>
-document.getElementById("enquiry-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let subject = document.getElementById("subject").value.trim();
-    let message = document.getElementById("message").value.trim();
-
-    if (name === "" || email === "" || subject === "" || message === "") {
-        alert("Please fill out all fields.");
-        return;
-    }
-
-    alert("Thank you for your enquiry! We will get back to you soon.");
-    this.reset();
-});
-</script>
 
 
     <script>
