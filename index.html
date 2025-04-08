@@ -119,6 +119,39 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #fefefe, #f0f4f8);
+    border-left: 5px solid #35424a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: #35424a;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
 
 
 
@@ -155,40 +188,30 @@
         </section>
 
         <section id="projects" class="section fade-in">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Website Development(Professionally deployed)</h3>
-                <p> Developed and deployed <a href="https://hmfabconsultants.in  ">hmfabconsultants.in</a>, a responsive website utilizing HTML, CSS, and
-                JavaScript. The site features a user-friendly interface, optimized performance, and cross-browser
-                compatibility to enhance user experience.</p>
-            </div>
-            <div class="project">
-                <h3>Test Case Design & Defect Reporting (Orange HRM)
-</h3>
-                <p>Created test cases for Admin, Leave, PIM, Dashboard, etc, modules in OrangeHRM and prepared
-a defect report to ensure smooth functionality.
-</p>
-            </div>
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>🌐 Website Development (Professionally Deployed)</h3>
+            <p>Developed and deployed <a href="https://hmfabconsultants.in" target="_blank">hmfabconsultants.in</a>, a responsive website utilizing HTML, CSS, and JavaScript. The site features a user-friendly interface, optimized performance, and cross-browser compatibility.</p>
+        </div>
 
-            <div class="project">
-                <h3>Automation and Validation of Insurance Calculation (Tricentis Site Automation)</h3>
-                <p>Wrote test script for the truck insurance calculation process on a Tricentis website. Automated
-system to verify insurance rates by collecting user inputs and comparing various plans.
-</p>
-            </div>
+        <div class="project-card">
+            <h3>🧪 Test Case Design & Defect Reporting (Orange HRM)</h3>
+            <p>Created test cases for Admin, Leave, PIM, Dashboard modules in OrangeHRM and documented defects to ensure smooth and efficient software functionality.</p>
+        </div>
 
-            <div class="project">
-                <h3>Android Application Development (Final Year Project)
-</h3>
-                <p>Developed modules focusing on weight consciousness and preliminary pregnancy care with diet
-plans recommended by nutritionists. Utilized Kotlin and Firebase for dynamic variation, creativity,
-and storage solutions.
+        <div class="project-card">
+            <h3>⚙️ Automation & Validation of Insurance Calculation</h3>
+            <p>Wrote test scripts for insurance quote validation on Tricentis demo site. Automated user input and verified dynamic pricing across multiple scenarios.</p>
+        </div>
 
-</p>
-            </div>
+        <div class="project-card">
+            <h3>📱 Android App Development (Final Year Project)</h3>
+            <p>Developed modules focusing on weight consciousness and pregnancy care, with nutritionist-backed diet plans. Used Kotlin and Firebase for real-time updates and data storage.</p>
+        </div>
+    </div>
+</section>
 
-
-        </section>
 
         <section id="internships" class="section fade-in">
             <h2>Internship Experience</h2>
