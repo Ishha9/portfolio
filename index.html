@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     
+    <!-- CSS ALL -->
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -126,12 +127,15 @@
 }
 
 .project-card {
+    display: block;
     background: linear-gradient(135deg, #fefefe, #f0f4f8);
     border-left: 5px solid #35424a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    color: inherit; /* Use text color defined inside */
+    cursor: pointer; /* Show pointer on hover */
 }
 
 .project-card:hover {
@@ -152,70 +156,163 @@
 .project-card a:hover {
     text-decoration: underline;
 }
+.project-card p {
+    color: #333;
+}
+
+
+
+/* --- Floating Side Navigation --- */
+.side-nav {
+    position: fixed;
+    top: 60%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #35424a;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+
+.side-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    background: #f39c12;
+}
 
 
 
     </style>
+
 </head>
 <body>
+    <!-- HTML  -->
+  
+  
+    <!-- Floating Side Navigation -->
+<div class="side-nav">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#Experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</div>
+
     <header>
         <h1>Isha More</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#internships">Internship Experience</a>
+            <a href="#Experience">Professional Experience</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
+<!-- ABOUT -->
     <div class="container">
         <section id="about" class="section fade-in">
             <h2>About Me</h2>
-            <p>A diligent Computer Science graduate with a strong foundation in front-end development, software testing, and AI/ML applications. Good at test case design,programming, and developing creative solutions. Passionate about leveraging technology to solve complex problems and enhance user experiences. Seeking a role in Software Development or Quality Assurance to apply my skills effectively.</p>
+            <p>A dedicated Quality Assurance Engineer with strong experience in manual and automation testing, specializing in end-to-end validation of data-driven applications. Skilled in designing robust test scenarios, building automation scripts using Cypress, Robot Framework, and Selenium, and performing comprehensive API testing, database validation, and cross-browser UI testing. Experienced with tools like JIRA, Postman, Maven, MySQL, MongoDB, DBeaver, pgAdmin, and Agile QA practices. With hands-on exposure to real production workflows—scraper → DB → API → UI pipelines, state-level data validation, and UI stability checks—I focus on delivering reliable, high-quality software. Actively seeking a Quality Assurance / Test Automation role to apply my technical expertise and contribute to stronger product quality and user experience.</p>
             <a href="Isha more _.pdf" class="button" download>Download Resume</a>
         </section>
-
+<!-- Skills -->
         <section id="skills" class="section fade-in">
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="skill-card"><i class="fas fa-code"></i> SQL, Java, C,Python</div>
-                <div class="skill-card"><i class="fas fa-bug"></i> Software Testing</div>
-                <div class="skill-card"><i class="fab fa-html5"></i> HTML,CSS,JS,Bootstrap</div>
-                <div class="skill-card"><i class="fas fa-robot"></i> AI & ML </div>
-                <div class="skill-card"><i class="fas fa-tools"></i> Selenium, Cucumber,Maven,Cypress,Robot</div>
-            </div>
-        </section>
+    <h2>Skills</h2>
+    <div class="skills">
 
-        <section id="projects" class="section fade-in">
+        <!-- Programming Languages -->
+        <div class="skill-card">
+            <i class="fas fa-code"></i> 
+            Java, Python, C, PHP
+        </div>
+
+        <!-- Web Development -->
+        <div class="skill-card">
+            <i class="fab fa-html5"></i> 
+            HTML, CSS, JavaScript, Bootstrap
+        </div>
+
+        <!-- Testing Skills -->
+        <div class="skill-card">
+            <i class="fas fa-bug"></i> 
+            Manual Testing, Test Case Design, STLC, SDLC, Agile Methodology
+        </div>
+
+        <!-- Automation Tools -->
+        <div class="skill-card">
+            <i class="fas fa-tools"></i> 
+            Selenium, Cypress, Maven, POM, Robot Framework, Postman, AIO Tests, Jenkins, Copilot
+        </div>
+
+        <!-- Database Tools -->
+        <div class="skill-card">
+            <i class="fas fa-database"></i> 
+            MySQL, MongoDB, DBeaver, pgAdmin,SQL
+        </div>
+
+        <!-- Project Management & Collaboration -->
+        <div class="skill-card">
+            <i class="fas fa-project-diagram"></i> 
+            JIRA, Agile Scrum
+        </div>
+
+        <!-- AI/ML -->
+        <div class="skill-card">
+            <i class="fas fa-robot"></i> 
+            AI & ML (Sentiment Analysis, Classification, Clustering)
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects -->
+       <section id="projects" class="section fade-in">
     <h2>Projects</h2>
     <div class="projects-grid">
-        <div class="project-card">
+
+        <!-- Project 1: Website -->
+        <a href="https://hmfabconsultants.in" target="_blank" class="project-card">
             <h3>🌐 Website Development (Professionally Deployed)</h3>
-            <p>Developed and deployed <a href="https://hmfabconsultants.in" target="_blank">hmfabconsultants.in</a>, a responsive website utilizing HTML, CSS, and JavaScript. The site features a user-friendly interface, optimized performance, and cross-browser compatibility.</p>
-        </div>
+            <p>Developed and deployed a responsive website utilizing HTML, CSS, and JavaScript. The site features a user-friendly interface, optimized performance, and cross-browser compatibility.</p>
+        </a>
 
-        <div class="project-card">
+        <!-- Project 2: Orange HRM Test Case Design -->
+        <a href="YOUR_ORANGE_HRM_PROJECT_LINK" target="_blank" class="project-card">
             <h3>🧪 Test Case Design & Defect Reporting (Orange HRM)</h3>
-            <p>Created test cases for Admin, Leave, PIM, Dashboard modules in OrangeHRM and documented defects to ensure smooth and efficient software functionality.</p>
-        </div>
+            <p>Created test cases for Admin, Leave, PIM, and Dashboard modules in OrangeHRM and documented defects to ensure smooth and efficient software functionality.</p>
+        </a>
 
-        <div class="project-card">
+        <!-- Project 3: Insurance Automation -->
+        <a href="YOUR_INSURANCE_AUTOMATION_PROJECT_LINK" target="_blank" class="project-card">
             <h3>⚙️ Automation & Validation of Insurance Calculation</h3>
             <p>Wrote test scripts for insurance quote validation on Tricentis demo site. Automated user input and verified dynamic pricing across multiple scenarios.</p>
-        </div>
+        </a>
 
+        <!-- Project 4: Android App Development -->
         <div class="project-card">
             <h3>📱 Android App Development (Final Year Project)</h3>
             <p>Developed modules focusing on weight consciousness and pregnancy care, with nutritionist-backed diet plans. Used Kotlin and Firebase for real-time updates and data storage.</p>
         </div>
+
     </div>
 </section>
 
 
-        <section id="Professional Experience" class="section fade-in">
-            <h2>Experience</h2>
-            <div class="internship">
+<!-- Experience --> 
+        <section id="Experience" class="section fade-in">
+            <h2>Professional Experience</h2>
+            <div class="Experience">
                 <h3>Advarisk, Pune</h3>
                 <p><b>Quality analyst Intern (May 2025 – Nov 2025).</b></p>
                 <ul>
@@ -226,7 +323,7 @@
         <li>Validated complex workflows (e.g., Andhra Pradesh), IOC, and TSR modules for accurate data retrieval and stable UI performance.</li>
           </ul>
             </div>
-            <div class="internship">
+            <div class="Experience">
                 <h3>HM Fab Consultants – Business Website , Pune</h3>
     <p><b>Web Developer (Freelance Project)</b></p>
     <ul>
@@ -237,7 +334,7 @@
         <li>Enhanced the company’s online presence and credibility through a modern, SEO-optimized design.</li>
     </ul>
 </div>
-            <div class="internship">
+            <div class="Experience">
                 <h3>Elite Software, Pune</h3>
                 <p>Web Development Intern (Dec 2022 – Feb 2023).</p>
                 <p>Developed front-end websites using HTML, CSS, and Bootstrap. Gained experience in web hosting and domain management. Assisted in debugging and improving front-end components for enhanced user experience.</p>
@@ -297,6 +394,5 @@
     </script>
 </body>
 </html>
-
 
 
